@@ -1,0 +1,16 @@
+<template name="postItem">
+    <div class="container">
+        <a href="/">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="margin: 30px 0px;">返回</span>
+        </a>
+        {{#if Template.subscriptionsReady}} {{#with post}}
+        <p class="text-muted">{{title}}</p>
+        <img src="{{image.url}}" class="img-rounded img-responsive">
+        <a href="{{image.url}}" download>下载</a>
+        <br> {{{body}}} {{/with}} {{else}}
+        <p>Loading...</p>
+        {{/if}}
+        <hr>
+    </div>
+    {{> footer}}
+</template>
